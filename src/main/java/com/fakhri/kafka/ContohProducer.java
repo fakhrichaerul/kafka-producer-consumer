@@ -18,7 +18,7 @@ public class ContohProducer {
 
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
 
-        for(int i = 0; i < 100; i++) {
+        for(int i = 0; i <= 30; i++) {
             ProducerRecord<String, String> record = new ProducerRecord<>("topic-java-lagi", "Data ke " + i);
 
             producer.send(record);

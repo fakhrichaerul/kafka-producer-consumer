@@ -24,7 +24,7 @@ public class ContohConsumer {
         consumer.subscribe(Arrays.asList("topic-java-lagi"));
 
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(1000));
+            ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
             for (ConsumerRecord<String, String> record : records)
                 System.out.println("Receive data : " + record.value());
         }
